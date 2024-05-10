@@ -1,0 +1,88 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# COCO 2017 dataset https://cocodataset.org by Microsoft
+# Documentation: https://docs.ultralytics.com/datasets/detect/coco/
+# Example usage: yolo train data=coco.yaml
+# parent
+# ├── ultralytics
+# └── datasets
+#     └── coco  ← downloads here (20.1 GB)
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: ../datasets/coco # dataset root dir
+train: train2017.txt # train images (relative to 'path') 118287 images
+val: val2017.txt # val images (relative to 'path') 5000 images
+test: test-dev2017.txt # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
+
+
+# Classes
+names:
+  0: "2c_s"
+  1: "2d_s"
+  2: "2h_s"
+  3: "2s_s"
+  4: "3c_s"
+  5: "3d_s"
+  6: "3h_s"
+  7: "3s_s"
+  8: "4c_s"
+  9: "4d_s"
+  10: "4h_s"
+  11: "4s_s"
+  12: "5c_s"
+  13: "5d_s"
+  14: "5h_s"
+  15: "5s_s"
+  16: "6c_s"
+  17: "6d_s"
+  18: "6h_s"
+  19: "6s_s"
+  20: "7c_s"
+  21: "7d_s"
+  22: "7h_s"
+  23: "7s_s"
+  24: "8c_s"
+  25: "8d_s"
+  26: "8h_s"
+  27: "8s_s"
+  28: "9c_s"
+  29: "9d_s"
+  30: "9h_s"
+  31: "9s_s"
+  32: "Tc_s"
+  33: "Td_s"
+  34: "Th_s"
+  35: "Ts_s"
+  36: "Jc_s"
+  37: "Jd_s"
+  38: "Jh_s"
+  39: "Js_s"
+  40: "Qc_s"
+  41: "Qd_s"
+  42: "Qh_s"
+  43: "Qs_s"
+  44: "Kc_s"
+  45: "Kd_s"
+  46: "Kh_s"
+  47: "Ks_s"
+  48: "Ac_s"
+  49: "Ad_s"
+  50: "Ah_s"
+  51: "As_s"
+  52: "chips"
+  
+# Download script/URL (optional)
+download: |
+  from ultralytics.utils.downloads import download
+  from pathlib import Path
+
+  # Download labels
+  segments = True  # segment or box labels
+  dir = Path(yaml['path'])  # dataset root dir
+  url = 'https://github.com/ultralytics/yolov5/releases/download/v1.0/'
+  urls = [url + ('coco2017labels-segments.zip' if segments else 'coco2017labels.zip')]  # labels
+  download(urls, dir=dir.parent)
+  # Download data
+  urls = ['http://images.cocodataset.org/zips/train2017.zip',  # 19G, 118k images
+          'http://images.cocodataset.org/zips/val2017.zip',  # 1G, 5k images
+          'http://images.cocodataset.org/zips/test2017.zip']  # 7G, 41k images (optional)
+  download(urls, dir=dir / 'images', threads=3)

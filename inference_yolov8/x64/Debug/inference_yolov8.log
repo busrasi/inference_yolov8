@@ -1,0 +1,29 @@
+﻿  inference.cpp
+D:\Dev\inference_yolov8\inference_yolov8\inference.h(60,32): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'inference.cpp')
+  
+D:\Dev\inference_yolov8\inference_yolov8\inference.cpp(57,43): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\Dev\inference_yolov8\inference_yolov8\inference.cpp(65,39): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+D:\Dev\inference_yolov8\inference_yolov8\inference.cpp(65,39): warning C4244:         with
+D:\Dev\inference_yolov8\inference_yolov8\inference.cpp(65,39): warning C4244:         [
+D:\Dev\inference_yolov8\inference_yolov8\inference.cpp(65,39): warning C4244:             _Ty=float
+D:\Dev\inference_yolov8\inference_yolov8\inference.cpp(65,39): warning C4244:         ]
+D:\Dev\inference_yolov8\inference_yolov8\inference.cpp(90,47): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+D:\Dev\inference_yolov8\inference_yolov8\inference.h(60,32): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'main.cpp')
+  
+D:\Dev\inference_yolov8\inference_yolov8\main.cpp(40,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Dev\inference_yolov8\inference_yolov8\main.cpp(64,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Dev\inference_yolov8\inference_yolov8\main.cpp(65,74): warning C4244: 'argument': conversion from 'float' to '_Tp', possible loss of data
+D:\Dev\inference_yolov8\inference_yolov8\main.cpp(65,74): warning C4244:         with
+D:\Dev\inference_yolov8\inference_yolov8\main.cpp(65,74): warning C4244:         [
+D:\Dev\inference_yolov8\inference_yolov8\main.cpp(65,74): warning C4244:             _Tp=int
+D:\Dev\inference_yolov8\inference_yolov8\main.cpp(65,74): warning C4244:         ]
+D:\Dev\inference_yolov8\inference_yolov8\main.cpp(65,54): warning C4244: 'argument': conversion from 'float' to '_Tp', possible loss of data
+D:\Dev\inference_yolov8\inference_yolov8\main.cpp(65,54): warning C4244:         with
+D:\Dev\inference_yolov8\inference_yolov8\main.cpp(65,54): warning C4244:         [
+D:\Dev\inference_yolov8\inference_yolov8\main.cpp(65,54): warning C4244:             _Tp=int
+D:\Dev\inference_yolov8\inference_yolov8\main.cpp(65,54): warning C4244:         ]
+  Generating Code...
+  inference_yolov8.vcxproj -> D:\Dev\inference_yolov8\x64\Debug\inference_yolov8.exe
